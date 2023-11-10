@@ -81,6 +81,6 @@
     "styled-components": "^5.3.3",
     "universal-cookie": "^4.0.4",
     "yup": "^0.32.9",
-    "zod": "^1.11.13"
+    "zod": "^3.22.3"
   }
 }
