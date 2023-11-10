@@ -1,6 +1,6 @@
 // Rutas para hacer requests
 // No necesita estar loggeado → no auth
-const server = 'api.meetinguvg.me';
+const server = process.env.BACKEND_URL || 'api.meetinguvg.me';
 
 const LOGIN = `http://${server}/free/login`;
 const SIGNUP = `http://${server}/free/signup`;

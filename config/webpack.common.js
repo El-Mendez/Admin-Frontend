@@ -1,4 +1,5 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const webpack = require("webpack")
 const rules = require('./rules');
 
 module.exports = {
@@ -12,6 +13,11 @@ module.exports = {
     rules,
   },
   plugins: [
+	  new webpack.DefinePlugin({
+		  'process.env': {
+			  BACKEND_URL: JSON.stringify(process.env.BACKEND_URL)
+		  }
+	  }),
     new HtmlWebpackPlugin({
       template: './src/index.html',
     }),
