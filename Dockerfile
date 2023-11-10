@@ -10,7 +10,7 @@ ARG BACKEND_URL=api.meetinguvg.me
 RUN BACKEND_URL=$BACKEND_URL && npm run build
 
 # SETUP nginx
-FROM nginx:1.19.0
+FROM nginx:1.25.3
 WORKDIR /usr/share/nginx/html
 RUN rm -rf ./*
 
