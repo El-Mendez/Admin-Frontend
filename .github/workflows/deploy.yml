@@ -8,6 +8,7 @@ on:
 jobs:
   publish-docker:
     runs-on: ubuntu-latest
+    
     steps:
       - name: Copying the Source Code
         uses: actions/checkout@v2
@@ -44,3 +45,23 @@ jobs:
           file: ./Dockerfile-Action
           push: true
           tags: ${{ secrets.DOCKERHUB_USERNAME }}/frontend:latest,${{ secrets.DOCKERHUB_USERNAME }}/frontend:${{ github.sha }}
+
+  deploy:
+    runs-on: ubuntu-latest
+    needs: publish-docker
+
+    steps:
+      - name: Pull and Run Docker Image
+        uses: appleboy/ssh-action@v1.0.0
+        with:
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+          key: ${{ secrets.KEY }}
+          script: |
+            # stop old container
+            docker stop frontend
+            # pull new image
+            docker run -d -it --rm               \
+            -p 8080:80                           \
+            --name frontend                      \
+            ${{ secrets.DOCKERHUB_USERNAME }}/frontend:${{ github.sha }}
