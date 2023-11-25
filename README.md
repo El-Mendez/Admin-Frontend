@@ -1,4 +1,4 @@
-[![Meeting Frontend CI-CD](https://github.com/El-Mendez/ISW_Frontend/actions/workflows/actions.yml/badge.svg?branch=prod)](https://github.com/El-Mendez/ISW_Frontend/actions/workflows/actions.yml)
+[![Frontend Testing](https://github.com/El-Mendez/Admin-Frontend/actions/workflows/testing.yml/badge.svg)](https://github.com/El-Mendez/Admin-Frontend/actions/workflows/testing.yml)
 [![made-with-javascript](https://img.shields.io/badge/Made%20with-JavaScript-1f425f.svg)](https://www.javascript.com)
 
 
