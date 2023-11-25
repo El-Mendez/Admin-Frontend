@@ -17,3 +17,8 @@ Al estar hecho en NodeJS y React, podemos aprovecharnos de npm para usar todas l
 ```bash
 npm install
 ```
+
+### 3. Generar el HTML
+```bash
+npm run build
+```
