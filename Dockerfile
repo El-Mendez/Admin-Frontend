@@ -1,5 +1,5 @@
 # Build html
-FROM node:14.21.3-alpine3.17 AS builder
+FROM node:21.4.0-alpine3.17 AS builder
 WORKDIR /app
 COPY package.json .
 COPY package-lock.json .
