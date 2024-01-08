@@ -49,7 +49,7 @@
     "@dicebear/avatars": "^4.8.6",
     "@dicebear/avatars-bottts-sprites": "^4.8.6",
     "@hookform/resolvers": "^2.4.0",
-    "axios": "^0.21.1",
+    "axios": "^1.6.5",
     "bootstrap": "^5.0.0",
     "clean-webpack-plugin": "^3.0.0",
     "core-js": "^3.12.1",
